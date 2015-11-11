@@ -1,6 +1,6 @@
 import path from 'path';
 
-export default {
+module.exports = {
   entry: {
     app: path.resolve(__dirname, '../src/client/app.js'),
     head: path.resolve(__dirname, '../src/client/head.js'),
@@ -21,7 +21,11 @@ export default {
       {
         test: /\.js/,
         exclude: /node_modules/,
-        loaders: ['babel']
+        loader: 'babel',
+        query: {
+          cacheDirectory: true,
+          presets: ['es2015', 'stage-0', 'react']
+        }
       },
       {
         test: /\.scss$/,

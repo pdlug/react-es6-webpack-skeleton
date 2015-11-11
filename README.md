@@ -35,6 +35,10 @@ Check your code for style violations:
 
     npm lint
 
+Run the server:
+
+    npm run server
+
 ## TODO
 
 * More structured client code example (components, routing, stores, etc.)
